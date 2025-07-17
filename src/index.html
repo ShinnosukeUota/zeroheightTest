@@ -1,10 +1,130 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storybook Components Demo</title>
+    <link rel="stylesheet" href="main.css">
   </head>
   <body>
-    <p>これはテストです。</p>
-    <div class="storybook-card storybook-card--medium" style="cursor: pointer;"><div class="storybook-card__content"><h3 class="storybook-card__title">ああ</h3><p class="storybook-card__description">This is a default card with standard styling.</p></div></div>
+    <div class="demo-container">
+      <header class="demo-section">
+        <h1>Storybook Components Demo</h1>
+        <p>このページはStorybookコンポーネントを使用したデモページです。</p>
+      </header>
+
+      <section class="demo-section">
+        <h2>Buttons</h2>
+        <p>様々なサイズとスタイルのボタンコンポーネント</p>
+        <div class="button-group">
+          <button class="storybook-button storybook-button--primary storybook-button--small">Primary Small</button>
+          <button class="storybook-button storybook-button--primary storybook-button--medium">Primary Medium</button>
+          <button class="storybook-button storybook-button--primary storybook-button--large">Primary Large</button>
+          <button class="storybook-button storybook-button--secondary storybook-button--small">Secondary Small</button>
+          <button class="storybook-button storybook-button--secondary storybook-button--medium">Secondary Medium</button>
+          <button class="storybook-button storybook-button--secondary storybook-button--large">Secondary Large</button>
+        </div>
+      </section>
+
+      <section class="demo-section">
+        <h2>Cards</h2>
+        <p>レスポンシブなカードコンポーネント</p>
+        <div class="component-grid">
+          <div class="storybook-card storybook-card--small">
+            <img src="https://via.placeholder.com/280x200/555ab9/ffffff?text=Small+Card" alt="Small Card" class="storybook-card__image" width="280" height="200">
+            <div class="storybook-card__content">
+              <h3 class="storybook-card__title">Small Card</h3>
+              <p class="storybook-card__description">これは小さなカードのサンプルです。</p>
+              <div class="storybook-card__actions">
+                <button class="storybook-button storybook-button--primary storybook-button--small">詳細</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="storybook-card storybook-card--medium">
+            <img src="https://via.placeholder.com/350x200/555ab9/ffffff?text=Medium+Card" alt="Medium Card" class="storybook-card__image" width="350" height="200">
+            <div class="storybook-card__content">
+              <h3 class="storybook-card__title">Medium Card</h3>
+              <p class="storybook-card__description">これは中サイズのカードのサンプルです。より多くの情報を含むことができます。</p>
+              <div class="storybook-card__actions">
+                <button class="storybook-button storybook-button--primary storybook-button--small">詳細</button>
+                <button class="storybook-button storybook-button--secondary storybook-button--small">共有</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="storybook-card storybook-card--large">
+            <img src="https://via.placeholder.com/450x200/555ab9/ffffff?text=Large+Card" alt="Large Card" class="storybook-card__image" width="450" height="200">
+            <div class="storybook-card__content">
+              <h3 class="storybook-card__title">Large Card</h3>
+              <p class="storybook-card__description">これは大きなカードのサンプルです。たくさんの情報を含むことができ、複数のアクションボタンを配置できます。</p>
+              <div class="storybook-card__actions">
+                <button class="storybook-button storybook-button--primary storybook-button--small">詳細</button>
+                <button class="storybook-button storybook-button--secondary storybook-button--small">共有</button>
+                <button class="storybook-button storybook-button--secondary storybook-button--small">お気に入り</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="demo-section">
+        <h2>Card Variants</h2>
+        <p>異なるスタイルのカードバリエーション</p>
+        <div class="component-grid">
+          <div class="storybook-card storybook-card--medium storybook-card--elevated">
+            <div class="storybook-card__content">
+              <h3 class="storybook-card__title">Elevated Card</h3>
+              <p class="storybook-card__description">浮き上がったスタイルのカードです。</p>
+            </div>
+          </div>
+
+          <div class="storybook-card storybook-card--medium storybook-card--flat">
+            <div class="storybook-card__content">
+              <h3 class="storybook-card__title">Flat Card</h3>
+              <p class="storybook-card__description">フラットなスタイルのカードです。</p>
+            </div>
+          </div>
+
+          <div class="storybook-card storybook-card--medium storybook-card--outlined">
+            <div class="storybook-card__content">
+              <h3 class="storybook-card__title">Outlined Card</h3>
+              <p class="storybook-card__description">アウトラインが強調されたカードです。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="demo-section">
+        <h2>Header Component</h2>
+        <p>ヘッダーコンポーネントのデモ</p>
+        <div class="storybook-header">
+          <div>
+            <svg width="32" height="32" viewBox="0 0 32 32">
+              <g fill="none" fill-rule="evenodd">
+                <path
+                  d="M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z"
+                  fill="#FFF" />
+                <path
+                  d="M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z"
+                  fill="#555AB9" />
+                <path d="M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z" fill="#91BAF8" />
+              </g>
+            </svg>
+            <h2>Acme</h2>
+          </div>
+          <div>
+            <span class="welcome">Welcome, <b>ユーザー</b>!</span>
+            <button class="storybook-button storybook-button--secondary storybook-button--small">ログアウト</button>
+          </div>
+        </div>
+      </section>
+
+      <footer class="demo-section">
+        <h2>About</h2>
+        <p>このデモページはStorybookコンポーネントシステムを使用して作成されました。</p>
+        <p>各コンポーネントは独立して開発・テストされ、再利用可能な形で設計されています。</p>
+      </footer>
+    </div>
   </body>
 </html>

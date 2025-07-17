@@ -12,7 +12,8 @@
   vertical-align: top;
 }
 
-.storybook-header h1 {
+.storybook-header h1,
+.storybook-header h2 {
   display: inline-block;
   vertical-align: top;
   margin: 6px 0 6px 10px;
